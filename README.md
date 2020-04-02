@@ -3,4 +3,5 @@
 
 最后更新：2020/04/02
 
-cve-2014-4210_ssrf_scan.py weblogic ssrf 漏洞扫描内网端口
+## weblogic
+**cve-2014-4210_ssrf_scan.py** weblogic_ssrf扫描内网端口利用脚本 [[使用教程]](https://freeerror.org/d/483-ssrf)
