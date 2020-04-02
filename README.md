@@ -33,3 +33,6 @@ Exphub包括多种不同名称、类型、格式、后缀的文件，这些文�
 [**struts2-052_webshell.py**](https://github.com/zhzyker/exphub/blob/master/struts2/struts2-052_webshell.py) Struts2 REST插件远程代码执行漏洞上传Webshell脚本(CVE-2017-9805)  
 [**struts2-053_command.py**](https://github.com/zhzyker/exphub/blob/master/struts2/struts2-053_command.py) Struts2 Freemarker标签远程执行命令漏洞利用脚本(CVE-2017-12611)  
 [**struts2-057_command.py**](https://github.com/zhzyker/exphub/blob/master/struts2/struts2-057_command.py) Struts2 Namespace远程代码执行漏洞利用脚本(CVE-2018-11776)  
+
+## Tomcat
+[**cve-2020-1938_exp.py**](https://github.com/zhzyker/exphub/blob/master/tomcat/cve-2020-1938_exp.py)  Tomcat幽灵猫任意文件读取漏洞利用脚本[[使用]](https://freeerror.org/d/484)
