@@ -9,7 +9,7 @@
 - cve-1111-1111_**shell** 直接获取目标Shell,可以交互
 - cve-1111-1111_**webshell** 自动或手动上传Webshell
 ##### 文件格式[py]: 
-- cve-1111-1111_xxxx.**py** Python文件，执行环境和版本肯有所差异，具体是py2还是py3每个文件有些说明(执行即可见)，推进py2.7和py3.7
+- cve-1111-1111_xxxx.**py** Python文件，文件有py2和py3的，具体那个文件那个版本参照说明(执行即可见)，推进py2.7和py3.7
 - cve-1111-1111_xxxx.**jar** Java文件，执行方式均为`java -jar cve-1111-1111_XXXX.jar`,推荐java1.8.121
 - cve-1111-1111_xxxx.**php** Php文件，直接使用`php`命令既可执行``
 
