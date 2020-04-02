@@ -23,10 +23,12 @@ Exphub包括多种不同名称、类型、格式、后缀的文件，这些文�
 - cve-xxxx.**txt** 无法编写成可执行文件的漏洞Payload，将直接写成txt文本，文本内记录如何使用(一般为GET/POST请求
 
 ## Weblogic
-[**cve-2014-4210_ssrf_scan.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/cve-2014-4210_ssrf_scan.py) weblogic_ssrf扫描内网端口利用脚本 [[使用]](https://freeerror.org/d/483-ssrf)  
-[**cve-2014-4210_ssrf_redis_shell.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/cve-2014-4210_ssrf_redis_shell.py) weblogic_ssrf漏洞内网redis未授权getshell脚本[[使用]](https://freeerror.org/d/483-ssrf)  
-[**cve-2017-3506_poc.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/cve-2017-3506_poc.py) Weblogic_wls-wsat远程命令执行漏洞检测脚本[[使用]](https://freeerror.org/d/468-cve-2017-3506-weblogic-wls-wsat)  
+[**cve-2014-4210_ssrf_scan.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/cve-2014-4210_ssrf_scan.py) Weblogic ssrf扫描内网端口利用脚本 [[使用]](https://freeerror.org/d/483-ssrf)  
+[**cve-2014-4210_ssrf_redis_shell.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/cve-2014-4210_ssrf_redis_shell.py) Weblogic ssrf漏洞内网redis未授权getshell脚本[[使用]](https://freeerror.org/d/483-ssrf)  
+[**cve-2017-3506_poc.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/cve-2017-3506_poc.py) Weblogic wls-wsat远程命令执行漏洞检测脚本[[使用]](https://freeerror.org/d/468-cve-2017-3506-weblogic-wls-wsat)  
 [**cve-2017-3506_webshell.jar**](https://github.com/zhzyker/exphub/blob/master/weblogic/cve-2017-3506_webshell.jar) Weblogic wls-wsat远程命令执行漏洞利用，上传Webshell[[使用]](https://freeerror.org/d/468-cve-2017-3506-weblogic-wls-wsat)  
 
 ## Struts2
-[**struts2-052_command.py**](https://github.com/zhzyker/exphub/blob/master/struts2/struts2-052_command.py) Struts2 REST插件远程代码执行漏洞
+[**struts2-052_command.py**](https://github.com/zhzyker/exphub/blob/master/struts2/struts2-052_command.py) Struts2 REST插件远程代码执行漏洞利用脚本(CVE-2017-9805)  
+[**struts2-052_webshell.py**](https://github.com/zhzyker/exphub/blob/master/struts2/struts2-052_webshell.py) Struts2 REST插件远程代码执行漏洞上传Webshell脚本(CVE-2017-9805)  
+[**struts2-053_command.py**](https://github.com/zhzyker/exphub/blob/master/struts2/struts2-053_command.py) Struts2 Freemarker标签远程执行命令漏洞利用脚本(CVE-2017-12611)  
