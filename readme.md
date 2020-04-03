@@ -6,7 +6,7 @@ Exphub[漏洞利用脚本库]
 最后更新：2020/04/02 (持续填坑中)  
 
 # Readme
-Exphub包括多种不同名称、类型、格式、后缀的文件，这些文件可以大致分为[漏洞验证脚本]、[远程命令执行脚本]、[远程命令执行脚本]、[Webshell上传脚本]  
+Exphub包括多种不同名称、类型、格式、后缀的文件，这些文件可以大致分为[漏洞验证脚本]、[漏洞利用脚本]、[远程命令执行脚本]、[远程命令执行脚本]、[Webshell上传脚本]  
 脚本文件示例：cve-1111-1111_xxxx.py  
 
 脚本文件种类[xxxx]:  
@@ -24,17 +24,18 @@ Exphub包括多种不同名称、类型、格式、后缀的文件，这些文�
 - cve-xxxx.**txt** 无法编写成可执行文件的漏洞Payload，将直接写成txt文本，文本内记录如何使用(一般为GET/POST请求
 
 ## Weblogic
-[**cve-2014-4210_ssrf_scan.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/cve-2014-4210_ssrf_scan.py) Weblogic ssrf扫描内网端口利用脚本 [[使用]](https://freeerror.org/d/483-ssrf)  
-[**cve-2014-4210_ssrf_redis_shell.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/cve-2014-4210_ssrf_redis_shell.py) Weblogic ssrf漏洞内网redis未授权getshell脚本[[使用]](https://freeerror.org/d/483-ssrf)  
-[**cve-2017-3506_poc.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/cve-2017-3506_poc.py) Weblogic wls-wsat远程命令执行漏洞检测脚本[[使用]](https://freeerror.org/d/468-cve-2017-3506-weblogic-wls-wsat)  
-[**cve-2017-3506_webshell.jar**](https://github.com/zhzyker/exphub/blob/master/weblogic/cve-2017-3506_webshell.jar) Weblogic wls-wsat远程命令执行漏洞利用，上传Webshell[[使用]](https://freeerror.org/d/468-cve-2017-3506-weblogic-wls-wsat)  
-[**cve-2017-10271_poc.jar**](https://github.com/zhzyker/exphub/blob/master/weblogic/cve-2017-10271_poc.jar) Weblogic < 10.3.6 wls-wsat XMLDecoder反序列化漏洞[[使用]](https://freeerror.org/d/460)
+[**cve-2014-4210_ssrf_scan.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) Weblogic ssrf扫描内网端口利用脚本 [[使用]](https://freeerror.org/d/483)  
+[**cve-2014-4210_ssrf_redis_shell.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) Weblogic ssrf漏洞内网redis未授权getshell脚本[[使用]](https://freeerror.org/d/483)  
+[**cve-2017-3506_poc.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) Weblogic wls-wsat远程命令执行漏洞检测脚本[[使用]](https://freeerror.org/d/468)  
+[**cve-2017-3506_webshell.jar**](https://github.com/zhzyker/exphub/blob/master/weblogic/) Weblogic wls-wsat远程命令执行漏洞利用，上传Webshell[[使用]](https://freeerror.org/d/468)  
+[**cve-2017-10271_poc.jar**](https://github.com/zhzyker/exphub/blob/master/weblogic/) Weblogic wls-wsat XMLDecoder反序列化漏洞[[使用]](https://freeerror.org/d/460)  
+[**cve-2017-10271_webshell.jar**](https://github.com/zhzyker/exphub/blob/master/weblogic/) Weblogic wls-wsat XMLDecoder反序列化漏洞利用脚本[[使用]](https://freeerror.org/d/460)
 
 ## Struts2
-[**struts2-052_command.py**](https://github.com/zhzyker/exphub/blob/master/struts2/struts2-052_command.py) Struts2 REST插件远程代码执行漏洞利用脚本(CVE-2017-9805)  
-[**struts2-052_webshell.py**](https://github.com/zhzyker/exphub/blob/master/struts2/struts2-052_webshell.py) Struts2 REST插件远程代码执行漏洞上传Webshell脚本(CVE-2017-9805)  
-[**struts2-053_command.py**](https://github.com/zhzyker/exphub/blob/master/struts2/struts2-053_command.py) Struts2 Freemarker标签远程执行命令漏洞利用脚本(CVE-2017-12611)  
-[**struts2-057_command.py**](https://github.com/zhzyker/exphub/blob/master/struts2/struts2-057_command.py) Struts2 Namespace远程代码执行漏洞利用脚本(CVE-2018-11776)  
+[**struts2-052_command.py**](https://github.com/zhzyker/exphub/blob/master/struts2) Struts2 REST插件远程代码执行漏洞利用脚本(CVE-2017-9805)  
+[**struts2-052_webshell.py**](https://github.com/zhzyker/exphub/blob/master/struts2) Struts2 REST插件远程代码执行漏洞上传Webshell脚本(CVE-2017-9805)  
+[**struts2-053_command.py**](https://github.com/zhzyker/exphub/blob/master/struts2) Struts2 Freemarker标签远程执行命令漏洞利用脚本(CVE-2017-12611)  
+[**struts2-057_command.py**](https://github.com/zhzyker/exphub/blob/master/struts2) Struts2 Namespace远程代码执行漏洞利用脚本(CVE-2018-11776)  
 
 ## Tomcat
-[**cve-2020-1938_exp.py**](https://github.com/zhzyker/exphub/blob/master/tomcat/cve-2020-1938_exp.py)  Tomcat幽灵猫任意文件读取漏洞利用脚本[[使用]](https://freeerror.org/d/484)
+[**cve-2020-1938_exp.py**](https://github.com/zhzyker/exphub/blob/master/tomcat/)  Tomcat幽灵猫任意文件读取漏洞利用脚本[[使用]](https://freeerror.org/d/484)
