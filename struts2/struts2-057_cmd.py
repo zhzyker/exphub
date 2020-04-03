@@ -33,8 +33,3 @@ if __name__=='__main__':
     cmd=sys.argv[2]
     attack=Exploit()
     attack.exp(url,cmd)
-
-
-#  * 	匹配任何元素节点。
-# @*	匹配任何属性节点。
-# node()	匹配任何类型的节点。
