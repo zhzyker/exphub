@@ -28,6 +28,7 @@ Exphub包括多种不同名称、类型、格式、后缀的文件，这些文�
 [**cve-2014-4210_ssrf_redis_shell.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/cve-2014-4210_ssrf_redis_shell.py) Weblogic ssrf漏洞内网redis未授权getshell脚本[[使用]](https://freeerror.org/d/483-ssrf)  
 [**cve-2017-3506_poc.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/cve-2017-3506_poc.py) Weblogic wls-wsat远程命令执行漏洞检测脚本[[使用]](https://freeerror.org/d/468-cve-2017-3506-weblogic-wls-wsat)  
 [**cve-2017-3506_webshell.jar**](https://github.com/zhzyker/exphub/blob/master/weblogic/cve-2017-3506_webshell.jar) Weblogic wls-wsat远程命令执行漏洞利用，上传Webshell[[使用]](https://freeerror.org/d/468-cve-2017-3506-weblogic-wls-wsat)  
+[**cve-2017-10271_poc.jar**](https://github.com/zhzyker/exphub/blob/master/weblogic/cve-2017-10271_poc.jar) Weblogic < 10.3.6 wls-wsat XMLDecoder反序列化漏洞[[使用]](https://freeerror.org/d/460)
 
 ## Struts2
 [**struts2-052_command.py**](https://github.com/zhzyker/exphub/blob/master/struts2/struts2-052_command.py) Struts2 REST插件远程代码执行漏洞利用脚本(CVE-2017-9805)  
