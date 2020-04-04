@@ -30,6 +30,8 @@ Exphub包括多种不同名称、类型、格式、后缀的文件，这些文�
 [**cve-2017-3506_webshell.jar**](https://github.com/zhzyker/exphub/blob/master/weblogic/) Weblogic wls-wsat 远程命令执行漏洞利用，上传Webshell[[使用]](https://freeerror.org/d/468)  
 [**cve-2017-10271_poc.jar**](https://github.com/zhzyker/exphub/blob/master/weblogic/) Weblogic wls-wsat XMLDecoder 反序列化漏洞[[使用]](https://freeerror.org/d/460)  
 [**cve-2017-10271_webshell.jar**](https://github.com/zhzyker/exphub/blob/master/weblogic/) Weblogic wls-wsat XMLDecoder 反序列化漏洞利用脚本[[使用]](https://freeerror.org/d/460)  
+[**cve-2018-2628_poc.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) Weblogic WLS Core Components 反序列化命令执行漏洞验证脚本[[使用]](https://freeerror.org/d/464)  
+[**cve-2018-2628_webshell.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) 	Weblogic WLS Core Components 命令执行漏洞上传Webshell脚本[[使用]](https://freeerror.org/d/464)  
 [**cve-2018-2893_poc.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) WebLogic WLS 核心组件反序列化漏洞检测脚本  
 [**cve-2018-2893_cmd.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) WebLogic WLS 核心组件反序列化漏洞利用脚本  
 [**cve-2018-2894_poc_exp.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/)	Weblogic 任意文件上传漏洞检测+利用  
