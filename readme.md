@@ -3,16 +3,16 @@ Exphub[漏洞利用脚本库]
 目前包括Webloigc、Struts2、Tomcat的漏洞利用脚本，均为亲测可用的脚本文件，尽力补全所有脚本文件的使用说明文档，优先更新高危且易利用的漏洞利用脚本  
 部分脚本或程序是从网上搜集的，若有版权要求联系即改  
 
-最后更新：2020/04/05 (持续填坑中)  
+最后更新：2020/04/07 (持续填坑中)  
 
 # Readme
-Exphub包括多种不同名称、类型、格式、后缀的文件，这些文件可以大致分为[漏洞验证脚本]、[漏洞利用脚本]、[远程命令执行脚本]、[远程命令执行脚本]、[Webshell上传脚本]  
+Exphub包括多种不同名称、类型、格式、后缀的文件，这些文件可以大致分为[漏洞验证脚本]、[漏洞利用脚本]、[远程命令执行脚本]、[shell交互脚本]、[Webshell上传脚本]  
 脚本文件示例：cve-1111-1111_xxxx.py  
 
 脚本文件种类[xxxx]:  
 - cve-1111-1111_**poc** [漏洞验证脚本] 仅检测验证漏洞是否存在
 - cve-1111-1111_**exp** [漏洞利用脚本] 例如文件包含、任意文件读取等常规漏洞，具体每个脚本使用另参[使用]
-- cve-1111-1111_**command** [远程命令执行脚本] 通过脚本文件向目标系统发送命令并执行，无法交互
+- cve-1111-1111_**cmd** [远程命令执行脚本] 通过脚本文件向目标系统发送命令并执行，无法交互
 - cve-1111-1111_**shell** [远程命令执行脚本] 直接反弹Shell，或者提供简单的交互Shell以传递命令,基础交互
 - cve-1111-1111_**webshell** [Webshell上传脚本] 自动或手动上传Webshell  
 
@@ -48,4 +48,7 @@ Exphub包括多种不同名称、类型、格式、后缀的文件，这些文�
 [**cve-2020-1938_exp.py**](https://github.com/zhzyker/exphub/blob/master/tomcat/) Tomcat 幽灵猫任意文件读取漏洞利用脚本[[使用]](https://freeerror.org/d/484)
 
 ## Drupal
-[**cve-2018-7600_cmd.py**](https://github.com/zhzyker/exphub/tree/master/drupal) 	Drupal Drupalgeddon 2 远程代码执行漏洞利用脚本[[使用]](https://freeerror.org/d/426)
+[**cve-2018-7600_cmd.py**](https://github.com/zhzyker/exphub/tree/master/drupal) Drupal Drupalgeddon 2 远程代码执行漏洞利用脚本[[使用]](https://freeerror.org/d/426)  
+[**cve-2018-7600_poc.py**](https://github.com/zhzyker/exphub/tree/master/drupal) 该脚本可检测 CVE-2018-7602 和 CVE-2018-7600  
+[**cve-2018-7602_cmd.py**](https://github.com/zhzyker/exphub/tree/master/drupal) Drupal 内核远程代码执行漏洞利用脚本(需要账户密码)  
+[**cve-2018-7602_poc.py**](https://github.com/zhzyker/exphub/tree/master/drupal) 该脚本可检测 CVE-2018-7602 和 CVE-2018-7600 
