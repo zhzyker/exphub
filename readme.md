@@ -2,6 +2,7 @@
 Exphub[漏洞利用脚本库]  
 目前包括Webloigc、Struts2、Tomcat的漏洞利用脚本，均为亲测可用的脚本文件，尽力补全所有脚本文件的使用说明文档，优先更新高危且易利用的漏洞利用脚本  
 部分脚本或程序是从网上搜集的，若有版权要求联系即改  
+论坛：https://freeerror.org/d/487-exphub
 
 最后更新：2020/04/07 (持续填坑中)  
 
@@ -45,7 +46,9 @@ Exphub包括多种不同名称、类型、格式、后缀的文件，这些文�
 [**struts2-057_cmd.py**](https://github.com/zhzyker/exphub/blob/master/struts2) Struts2 Namespace 远程代码执行漏洞利用脚本(CVE-2018-11776)  
 
 ## Tomcat
-[**cve-2020-1938_exp.py**](https://github.com/zhzyker/exphub/blob/master/tomcat/) Tomcat 幽灵猫任意文件读取漏洞利用脚本[[使用]](https://freeerror.org/d/484)
+[**cve-2020-1938_exp.py**](https://github.com/zhzyker/exphub/blob/master/tomcat/) Tomcat 幽灵猫任意文件读取漏洞利用脚本[[使用]](https://freeerror.org/d/484)  
+[**cve-2017-12615_cmd.py**](https://github.com/zhzyker/exphub/blob/master/tomcat/) Tomcat 远程代码执行漏洞利用脚本
+[[使用]](https://freeerror.org/d/411)
 
 ## Drupal
 [**cve-2018-7600_cmd.py**](https://github.com/zhzyker/exphub/tree/master/drupal) Drupal Drupalgeddon 2 远程代码执行漏洞利用脚本[[使用]](https://freeerror.org/d/426)  
