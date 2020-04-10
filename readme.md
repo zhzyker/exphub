@@ -4,7 +4,7 @@ Exphub[漏洞利用脚本库] （想要star⭐~)
 部分脚本或程序是从网上搜集的，若有版权要求联系即改  
 论坛：https://freeerror.org/d/487
 
-最后更新：2020/04/09 (持续填坑中)  
+最后更新：2020/04/10 (持续填坑中)，添加struts2-032_cmd.py、struts2-032_poc.py
 
 # Readme
 Exphub包括多种不同名称、类型、格式、后缀的文件，这些文件可以大致分为[漏洞验证脚本]、[漏洞利用脚本]、[远程命令执行脚本]、[shell交互脚本]、[Webshell上传脚本]  
@@ -40,6 +40,8 @@ Exphub包括多种不同名称、类型、格式、后缀的文件，这些文�
 [**cve-2020-2551_poc.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) Weblogic IIOP 反序列化漏洞检测脚本
 
 ## Struts2
+[**struts2-032_cmd.py**](https://github.com/zhzyker/exphub/blob/master/struts2)	Struts2 method 任意代码执行漏洞GetShell利用脚本(CVE-2016-3081)  
+[**struts2-032_poc.py**](https://github.com/zhzyker/exphub/blob/master/struts2)	Struts2 method 任意代码执行漏洞检测脚本(CVE-2016-3081)    
 [**struts2-045_cmd.py**](https://github.com/zhzyker/exphub/blob/master/struts2)	Struts2 Jakarta Multipart parser 插件远程命令执行漏洞利用脚本1(CVE-2017-5638)[[使用]](https://freeerror.org/d/490)  
 [**struts2-045-2_cmd.py**](https://github.com/zhzyker/exphub/blob/master/struts2)	Struts2 Jakarta Multipart parser 插件远程命令执行漏洞利用脚本2(CVE-2017-5638)[[使用]](https://freeerror.org/d/490)  
 [**struts2-052_cmd.py**](https://github.com/zhzyker/exphub/blob/master/struts2) Struts2 REST 插件远程代码执行漏洞利用脚本(CVE-2017-9805)  
