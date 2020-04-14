@@ -4,7 +4,7 @@ Exphub[漏洞利用脚本库] （想要star⭐~)
 部分脚本或程序是从网上搜集的，若有版权要求联系即改  
 论坛：https://freeerror.org/d/487
 
-最后更新：2020/04/13 (持续填坑中)，添加cve-2019-7238_cmd.py
+最后更新：2020/04/14 (持续填坑中)，添加cve-2017-12149_cmd.py
 
 # Readme
 Exphub包括多种不同名称、类型、格式、后缀的文件，这些文件可以大致分为[漏洞验证脚本]、[漏洞利用脚本]、[远程命令执行脚本]、[shell交互脚本]、[Webshell上传脚本]  
@@ -64,3 +64,4 @@ Exphub包括多种不同名称、类型、格式、后缀的文件，这些文�
 [**cve-2019-7238_cmd.py**](https://github.com/zhzyker/exphub/tree/master/nexus/) Nexus Repository Manager 3 远程代码执行漏洞利用脚本
 
 ## Jboss
+[**cve-2017-12149_cmd.py**](https://github.com/zhzyker/exphub/tree/master/jboss) JBoss 5.x/6.x 反序列化远程代码执行漏洞利用脚本  
