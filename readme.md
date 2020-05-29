@@ -1,11 +1,11 @@
 # Exphub
 Exphub[漏洞利用脚本库] （想要star⭐~)  
 目前包括Webloigc、Struts2、Tomcat、Drupal的漏洞利用脚本，均为亲测可用的脚本文件，尽力补全所有脚本文件的使用说明文档，优先更新高危且易利用的漏洞利用脚本  
-部分脚本或程序是从网上搜集的，若有版权要求联系即改  
+部分脚本或文件是搜集的，若有版权要求联系即改  
 鹅群：219291257  
 bilibili：https://space.bilibili.com/64648363
 
-最后更新：2020/05/27 (持续填坑中)，最近添加 cve-2020-10204_cmd.py、cve-2020-11444_exp.py
+最后更新：2020/05/29 (持续填坑中)，最近添加 **cve-2020-2883_cmd.py、cve-2020-2555_cmd.py**
 
 # Readme
 Exphub包括多种不同名称、类型、格式、后缀的文件，这些文件可以大致分为[漏洞验证脚本]、[漏洞利用脚本]、[远程命令执行脚本]、[shell交互脚本]、[Webshell上传脚本]  
@@ -38,12 +38,14 @@ Exphub包括多种不同名称、类型、格式、后缀的文件，这些文�
 [**cve-2018-2893_cmd.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) WebLogic WLS 核心组件反序列化漏洞利用脚本  
 [**cve-2018-2894_poc_exp.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/)	Weblogic 任意文件上传漏洞检测+利用  
 [**cve-2019-2618_webshell.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) Weblogic 任意文件上传漏洞(需要账户密码)[[使用]](https://freeerror.org/d/469)  
-[**cve-2020-2551_poc.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) Weblogic IIOP 反序列化漏洞检测脚本
+[**cve-2020-2551_poc.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) Weblogic IIOP 反序列化漏洞检测脚本  
+[**cve-2020-2555_cmd.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) WebLogic T3 协议反序列化远程命令执行  
+[**cve-2020-2883_cmd.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) WebLogic T3 协议反序列化远程命令执行
 
 ## Solr
 [**cve-2017-12629_cmd.py**](https://github.com/zhzyker/exphub/tree/master/solr) Apache Solr 远程命令执行脚本  
 [**cve-2019-0193_cmd.py**](https://github.com/zhzyker/exphub/tree/master/solr) Apache Solr DataImportHandler 远程代码执行漏洞利用脚本  
-[**cve-2019-17558_cmd.py**](https://github.com/zhzyker/exphub/tree/master/solr) Apache Solr Velocity远程代码执行漏洞利用脚本[[视频]](https://www.bilibili.com/video/BV1jf4y12749)  
+[**cve-2019-17558_cmd.py**](https://github.com/zhzyker/exphub/tree/master/solr) Apache Solr Velocity远程代码执行漏洞利用脚本[[视频_Bilibili]](https://www.bilibili.com/video/BV1jf4y12749) [[视频_YouTube]](https://www.youtube.com/watch?v=WP81oOl2AgU)  
 
 ## Spring
 [**cve-2018-1273_cmd.py**](https://github.com/zhzyker/exphub/tree/master/spring) Spring 远程代码执行漏洞利用脚本  
@@ -71,10 +73,10 @@ Exphub包括多种不同名称、类型、格式、后缀的文件，这些文�
 
 ## Nexus
 [**cve-2019-7238_cmd.py**](https://github.com/zhzyker/exphub/tree/master/nexus/) Nexus Repository Manager 3 远程代码执行漏洞利用脚本  
-[**cve-2020-10199_poc.py**](https://github.com/zhzyker/exphub/tree/master/nexus/) Nexus Repository Manager 3 远程命令执行漏洞检测脚本  
-[**cve-2020-10199_cmd.py**](https://github.com/zhzyker/exphub/tree/master/nexus/) Nexus Repository Manager 3 远程代码执行漏洞(可回显)  
-[**cve-2020-10204_cmd.py**](https://github.com/zhzyker/exphub/tree/master/nexus/)	Nexus Manager 3 远程命令执行漏洞利用脚本(无回显)  
-[**cve-2020-11444_exp.py**](https://github.com/zhzyker/exphub/tree/master/nexus/)	Nexus 3 任意修改admin密码越权漏洞利用脚本
+[**cve-2020-10199_poc.py**](https://github.com/zhzyker/exphub/tree/master/nexus/) Nexus Repository Manager 3 远程命令执行漏洞检测脚本[[视频_Bilibili]](https://www.bilibili.com/video/BV1uQ4y1P7MA/) [[视频_YouTube]](https://www.youtube.com/watch?v=ocQMDYxTMKk)  
+[**cve-2020-10199_cmd.py**](https://github.com/zhzyker/exphub/tree/master/nexus/) Nexus Repository Manager 3 远程代码执行漏洞(可回显)[[视频_Bilibili]](https://www.bilibili.com/video/BV1uQ4y1P7MA/) [[视频_YouTube]](https://www.youtube.com/watch?v=ocQMDYxTMKk)  
+[**cve-2020-10204_cmd.py**](https://github.com/zhzyker/exphub/tree/master/nexus/)	Nexus Manager 3 远程命令执行漏洞利用脚本(无回显)[[视频_Bilibili]](https://www.bilibili.com/video/BV1uQ4y1P7MA/) [[视频_YouTube]](https://www.youtube.com/watch?v=ocQMDYxTMKk)  
+[**cve-2020-11444_exp.py**](https://github.com/zhzyker/exphub/tree/master/nexus/)	Nexus 3 任意修改admin密码越权漏洞利用脚本[[视频_Bilibili]](https://www.bilibili.com/video/BV1uQ4y1P7MA/) [[视频_YouTube]](https://www.youtube.com/watch?v=ocQMDYxTMKk)  
 
 ## Jboss
 [**cve-2017-12149_poc.py**](https://github.com/zhzyker/exphub/tree/master/jboss) JBoss 5.x/6.x 反序列化远程代码执行漏洞验证脚本  
