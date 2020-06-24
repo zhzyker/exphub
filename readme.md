@@ -5,7 +5,7 @@ Exphub[漏洞利用脚本库] （想要star⭐~)
 鹅群：219291257  
 bilibili：https://space.bilibili.com/64648363
 
-最后更新：2020/05/29 (持续填坑中)，最近添加 **cve-2020-2883_cmd.py、cve-2020-2555_cmd.py**
+最后更新：2020/06/24 (持续填坑中)，最近添加 **fastjson-(1.2.24-1.2.66)_rce.py**
 
 # Readme
 Exphub包括多种不同名称、类型、格式、后缀的文件，这些文件可以大致分为[漏洞验证脚本]、[漏洞利用脚本]、[远程命令执行脚本]、[shell交互脚本]、[Webshell上传脚本]  
@@ -14,7 +14,8 @@ Exphub包括多种不同名称、类型、格式、后缀的文件，这些文�
 脚本文件种类[xxxx]:  
 - cve-1111-1111_**poc** [漏洞验证脚本] 仅检测验证漏洞是否存在
 - cve-1111-1111_**exp** [漏洞利用脚本] 例如文件包含、任意文件读取等常规漏洞，具体每个脚本使用另参[使用]
-- cve-1111-1111_**cmd** [远程命令执行脚本] 通过脚本文件向目标系统发送命令并执行，无法交互
+- cve-1111-1111_**rce** [远程命令执行脚本] 命令执行漏洞利用脚本，无法交互  
+- cve-1111-1111_**cmd** [远程命令执行脚本] 命令执行漏洞利用脚本，无法交互
 - cve-1111-1111_**shell** [远程命令执行脚本] 直接反弹Shell，或者提供简单的交互Shell以传递命令,基础交互
 - cve-1111-1111_**webshell** [Webshell上传脚本] 自动或手动上传Webshell  
 
@@ -24,6 +25,16 @@ Exphub包括多种不同名称、类型、格式、后缀的文件，这些文�
 - cve-xxxx.**jar** Java文件，执行方式均为`java -jar cve-xxxx.jar`,推荐Java1.8.121
 - cve-xxxx.**php** PHP文件，直接使用`php`命令执行即可
 - cve-xxxx.**txt** 无法编写成可执行文件的漏洞Payload，将直接写成txt文本，文本内记录如何使用(一般为GET/POST请求
+
+## Fastjson
+[**fastjson-1.2.24_rce.py**](https://github.com/zhzyker/exphub/tree/master/fastjson) Fastjson <=1.2.24 反序列化远程命令执行漏洞  
+[**fastjson-1.2.41_rce.py**](https://github.com/zhzyker/exphub/tree/master/fastjson) Fastjson <=1.2.41 反序列化远程命令执行漏洞  
+[**fastjson-1.2.42_rce.py**](https://github.com/zhzyker/exphub/tree/master/fastjson) Fastjson <=1.2.42 反序列化远程命令执行漏洞  
+[**fastjson-1.2.43_rce.py**](https://github.com/zhzyker/exphub/tree/master/fastjson) Fastjson <=1.2.43 反序列化远程命令执行漏洞  
+[**fastjson-1.2.45_rce.py**](https://github.com/zhzyker/exphub/tree/master/fastjson) Fastjson <=1.2.45 反序列化远程命令执行漏洞  
+[**fastjson-1.2.47_rce.py**](https://github.com/zhzyker/exphub/tree/master/fastjson) Fastjson <=1.2.47 反序列化远程命令执行漏洞  
+[**fastjson-1.2.62_rce.py**](https://github.com/zhzyker/exphub/tree/master/fastjson) Fastjson <=1.2.62 反序列化远程命令执行漏洞  
+[**fastjson-1.2.66_rce.py**](https://github.com/zhzyker/exphub/tree/master/fastjson) Fastjson <=1.2.66 反序列化远程命令执行漏洞  
 
 ## Weblogic
 [**cve-2014-4210_ssrf_scan.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) Weblogic SSRF 扫描内网端口利用脚本 [[使用]](https://freeerror.org/d/483)  
