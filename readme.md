@@ -32,7 +32,7 @@ Exphub包括多种不同名称、类型、格式、后缀的文件，这些文�
 [**fastjson-1.2.42_rce.py**](https://github.com/zhzyker/exphub/tree/master/fastjson) Fastjson <=1.2.42 反序列化远程命令执行漏洞  
 [**fastjson-1.2.43_rce.py**](https://github.com/zhzyker/exphub/tree/master/fastjson) Fastjson <=1.2.43 反序列化远程命令执行漏洞  
 [**fastjson-1.2.45_rce.py**](https://github.com/zhzyker/exphub/tree/master/fastjson) Fastjson <=1.2.45 反序列化远程命令执行漏洞  
-[**fastjson-1.2.47_rce.py**](https://github.com/zhzyker/exphub/tree/master/fastjson) Fastjson <=1.2.47 反序列化远程命令执行漏洞  
+[**fastjson-1.2.47_rce.py**](https://github.com/zhzyker/exphub/tree/master/fastjson) Fastjson <=1.2.47 反序列化远程命令执行漏洞[[使用]](https://freeerror.org/d/512)　　
 [**fastjson-1.2.62_rce.py**](https://github.com/zhzyker/exphub/tree/master/fastjson) Fastjson <=1.2.62 反序列化远程命令执行漏洞  
 [**fastjson-1.2.66_rce.py**](https://github.com/zhzyker/exphub/tree/master/fastjson) Fastjson <=1.2.66 反序列化远程命令执行漏洞  
 
