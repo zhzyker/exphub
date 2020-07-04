@@ -5,7 +5,7 @@ Exphub[漏洞利用脚本库] （想要star⭐~)
 鹅群：219291257  
 bilibili：https://space.bilibili.com/64648363
 
-最后更新：2020/06/24 (持续填坑中)，最近添加 **fastjson-(1.2.24-1.2.66)_rce.py**
+最后更新：2020/06/24 (持续填坑中)，最近添加 **shiro-1.2.4_rce.py**
 
 # Readme
 Exphub包括多种不同名称、类型、格式、后缀的文件，这些文件可以大致分为[漏洞验证脚本]、[漏洞利用脚本]、[远程命令执行脚本]、[shell交互脚本]、[Webshell上传脚本]  
@@ -52,6 +52,9 @@ Exphub包括多种不同名称、类型、格式、后缀的文件，这些文�
 [**cve-2020-2551_poc.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) Weblogic IIOP 反序列化漏洞检测脚本  
 [**cve-2020-2555_cmd.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) WebLogic T3 协议反序列化远程命令执行  
 [**cve-2020-2883_cmd.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) WebLogic T3 协议反序列化远程命令执行
+
+## Shiro
+[**shiro-1.2.4_rce.py**](https://github.com/zhzyker/exphub/tree/master/shiro) Apache Shiro rememberMe < 1.2.4 RCE exploit script  
 
 ## Solr
 [**cve-2017-12629_cmd.py**](https://github.com/zhzyker/exphub/tree/master/solr) Apache Solr 远程命令执行脚本  
