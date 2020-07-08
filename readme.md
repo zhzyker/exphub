@@ -5,7 +5,7 @@ Exphub[漏洞利用脚本库] （想要star⭐~)
 鹅群：219291257  
 bilibili：https://space.bilibili.com/64648363
 
-最后更新：2020/06/24 (持续填坑中)，最近添加 **shiro-1.2.4_rce.py**
+最后更新：2020/07/08 (持续填坑中)，最近添加 **cve-2020-5902_file.py**, 重构**shiro-1.2.4_rce.py**
 
 # Readme
 Exphub包括多种不同名称、类型、格式、后缀的文件，这些文件可以大致分为[漏洞验证脚本]、[漏洞利用脚本]、[远程命令执行脚本]、[shell交互脚本]、[Webshell上传脚本]  
@@ -84,6 +84,9 @@ Exphub包括多种不同名称、类型、格式、后缀的文件，这些文�
 [**cve-2018-7602_cmd.py**](https://github.com/zhzyker/exphub/tree/master/drupal) Drupal 内核远程代码执行漏洞利用脚本(需要账户密码)  
 [**cve-2018-7602_poc.py**](https://github.com/zhzyker/exphub/tree/master/drupal) 该脚本可检测 CVE-2018-7602 和 CVE-2018-7600  
 [**cve-2019-6340_cmd.py**](https://github.com/zhzyker/exphub/tree/master/drupal) Drupal 8.x REST RCE 远程执行代码漏洞利用脚本 
+
+## F5
+[**cve-2020-5902_file.py**](https://github.com/zhzyker/exphub/tree/master/f5) F5 BIG-IP 任意文件读取  
 
 ## Nexus
 [**cve-2019-7238_cmd.py**](https://github.com/zhzyker/exphub/tree/master/nexus/) Nexus Repository Manager 3 远程代码执行漏洞利用脚本  
