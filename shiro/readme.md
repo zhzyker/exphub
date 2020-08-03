@@ -5,6 +5,8 @@ Apache Shiro
 <details>
 <summary>Shiro 1.2.4 [点击展开] </summary>
   
+使用延时判断key和gadget，即时目标不出网也可以检测是否存在漏洞  
+修改了ysoserial支持延时命令，不要使用原版的ysoserial  
 ```
 +-------------------------------------------------------------------------------------------------------+
 + DES: By zhzyker as https://github.com/zhzyker/exphub                                                  +
