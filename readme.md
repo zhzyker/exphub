@@ -9,7 +9,7 @@ Exphub[漏洞利用脚本库] （想要star⭐~)
 鹅群：219291257  
 bilibili：https://space.bilibili.com/64648363
 
-最后更新：2020/07/08 (持续填坑中)，最近添加 **cve-2020-5902_file.py**, 重构**shiro-1.2.4_rce.py**
+最后更新：2020/11/07，最新添加 **cve-2020-14882_rce.py**
 
 # Readme
 Exphub包括多种不同名称、类型、格式、后缀的文件，这些文件可以大致分为[漏洞验证脚本]、[漏洞利用脚本]、[远程命令执行脚本]、[shell交互脚本]、[Webshell上传脚本]  
@@ -54,8 +54,9 @@ Exphub包括多种不同名称、类型、格式、后缀的文件，这些文�
 [**cve-2018-2894_poc_exp.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/)	Weblogic 任意文件上传漏洞检测+利用  
 [**cve-2019-2618_webshell.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) Weblogic 任意文件上传漏洞(需要账户密码)[[使用]](https://freeerror.org/d/469)  
 [**cve-2020-2551_poc.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) Weblogic IIOP 反序列化漏洞检测脚本  
-[**cve-2020-2555_cmd.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) WebLogic T3 协议反序列化远程命令执行  
-[**cve-2020-2883_cmd.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) WebLogic T3 协议反序列化远程命令执行
+[**cve-2020-2555_cmd.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) WebLogic GIOP 协议反序列化远程命令执行  
+[**cve-2020-2883_cmd.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) WebLogic T3 协议反序列化远程命令执行  
+[**cve-2020-14882_rce.py**](https://github.com/zhzyker/exphub/blob/master/weblogic/) WebLogic console 未授权命令执行
 
 ## Shiro
 [**shiro-1.2.4_rce.py**](https://github.com/zhzyker/exphub/tree/master/shiro) Apache Shiro rememberMe < 1.2.4 RCE exploit script  
