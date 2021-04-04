@@ -103,3 +103,6 @@ Exphub包括多种不同名称、类型、格式、后缀的文件，这些文�
 ## Jboss
 [**cve-2017-12149_poc.py**](https://github.com/zhzyker/exphub/tree/master/jboss) JBoss 5.x/6.x 反序列化远程代码执行漏洞验证脚本  
 [**cve-2017-12149_cmd.py**](https://github.com/zhzyker/exphub/tree/master/jboss) JBoss 5.x/6.x 反序列化远程代码执行漏洞利用脚本  
+
+## OFBiz
+[**cve-2021-26295_rce.py**](https://github.com/zhzyker/exphub/blob/master/ofbiz) RMI Deserializes Remote Code Execution  
